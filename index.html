@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="Css/style2.css">
+</head>
+
+<body>
+    <div class="giohang">
+        <a onclick="laydon()"><img src="images/cart.png"><span id="countsp">0</span></a>
+    </div>
+    <div id="showcart">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền ($)</th>
+            </tr>
+            <tbody id="mycart">
+                
+            </tbody>
+
+        </table>
+    </div>
+    <div class="boxcenter">
+        <div class="row mb header">
+            <h1> SIÊU THỊ TRỰC TUYẾN</h1>
+        </div>
+
+        <div class="row mb menu">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="#">Giỏ hàng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Góp ý</a></li>
+                <li><a href="#">Hỏi đáp</a></li>
+                <li><a href="dangky.html">Đăng ký thành viên</a></li>
+            </ul>
+        </div>
+        <div class="row mb ">
+            <div class="row">
+                <div class="banner mb">
+        <div id="kq">
+            <img id="hinh" src="images/0.webp" align='center' width="100%" height="100%">
+            <div class="dieuhuong">
+                <i class="fa fa-chevron-circle-left" onclick="prev()"></i>
+                <i class="fa fa-chevron-circle-right" onclick="next()"></i>
+            </div>
+            <div id="sohinh" align='center'></div>
+        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/1.webp"></div>
+                    <p><span>30</span>k</p>
+                    <a href="#">Mì Gà Cay</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/2.webp" alt=""></div>
+                    <p><span>20</span>k</p>
+                    <a href="#">Mỳ gà double cay</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="images/3.webp" alt=""></div>
+                    <p><span>30</span>k</p>
+                    <a href="#">Mỳ gà Jja Jang Myeon </a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/4.webp" alt=""></div>
+                    <p><span>17</span>k</p>
+                    <a href="#"> Mỳ cay băng giá (mỳ lạnh)</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/5.webp"  alt=""></div>
+                    <p><span>40</span>k</p>
+                    <a href="#">Mỳ gà cay Carbonara </a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="images/6.webp" alt=""></div>
+                    <p><span>20</span>k</p>
+                    <a href="#">Mỳ cay cà ri</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/7.webp" alt=""></div>
+                    <p><span>25</span>k</p>
+                    <a href="#"> Mỳ gà cay Mala </a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/8.webp" alt=""></div>
+                    <p><span>30</span>k</p>
+                    <a href="#">Mỳ cay khô vị phô mai</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="images/0.webp" alt=""></div>
+                    <p><span>220</span>k</p>
+                    <a href="#">Tổng hợp các loại Mì Gà Cay</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/cart.js"></script>
+    <script>
+        showcountsp();
+    </script>
+</body>
+</html>

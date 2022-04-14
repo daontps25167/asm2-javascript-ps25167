@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title> Nguyễn Trung Đạo _PS25167</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Css/style1.css">
+        <link href='https://css.gg/chevron-double-left-o.css' rel='stylesheet'>
+        <link href='https://css.gg/chevron-double-right-o.css' rel='stylesheet'>
+    </head>
+    <body>
+        <div class="slide">
+            <h2>Album Ảnh cảnh đẹp An Giang</h2>
+            <img src="images/1.jpg" id="hinh">
+            <div class="dieuhuong">
+                <i class="gg-chevron-double-left-o" onclick="prev()"></i>
+                <i class="gg-chevron-double-right-o" onclick="next()"></i>
+
+            </div>
+            <p id="dem"></p>
+        </div>
+    </body>
+</html>
+<script>
+    var arr_hinh=[
+        "image/1.jpg",
+        "image/2.jpg",
+        "image/3.jpg",
+        "image/4.jpg",
+        "image/5.jpg",
+        "image/6.jpg",
+        "image/7.jpg",
+    ]
+    var index=0;
+    function next(){
+        index++;
+        if(index>=arr_hinh.length)index=0;
+        var hinh = document.getElementById("hinh");
+        hinh.src = arr_hinh[index];
+        document.getElementById("dem").innerHTML = index + "/" + arr_hinh.length;
+    }
+    function prev(){
+        index--;
+        if(index>=0)index=-1;
+        document.getElementById("hinh").src = arr_hinh[index];
+        document.getElementById("dem").innerHTML = index + "/" + arr_hinh.length;
+    }
+    setInterval("next()",3500);
+</script>
